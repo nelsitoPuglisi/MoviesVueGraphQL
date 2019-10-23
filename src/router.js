@@ -1,11 +1,18 @@
 import Vue from "vue";
 import Router from "vue-router";
 import Home from "./views/Home.vue";
+import Callback from "./components/Callback.vue";
 
 Vue.use(Router);
 
 export default new Router({
+  mode: "history",
   routes: [
+    {
+      path: "/callback",
+      name: "callback",
+      component: Callback
+    },
     {
       path: "/",
       name: "home",
